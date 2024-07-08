@@ -60,7 +60,7 @@ console.log(username)
     from: "vatsan.designs@gmail.com",
     to: "info.creatorstock@gmail.com",
     subject: "Account Activation Link",
-    html: `<a href="http://localhost:5173/activate_account/${randomString}/${username}">Activate Account</a>`,
+    html: `<a href="https://url-shortener-frontend-kohl-tau.vercel.app/activate_account/${randomString}/${username}">Activate Account</a>`,
   };
   transporter.sendMail(mailOptions);
 
@@ -160,7 +160,7 @@ export const forgotpasssword = async (req, res, next) => {
       from: "vatsan.designs@gmail.com",
       to: userEmail,
       subject: "Link to Reset Password",
-      html: `<a href="http://localhost:5173/reset_password/${username}/${randomString1}">Forgot Password? Click Here to reset</a>`,
+      html: `<a href="https://url-shortener-frontend-kohl-tau.vercel.app/reset_password/${username}/${randomString1}">Forgot Password? Click Here to reset</a>`,
     };
     transporter.sendMail(mailOptions);
     res.status(200).json({ message: "Email Sent", data: true });
@@ -231,7 +231,7 @@ export const generate_url = async (req, res, next) => {
         uniqueness = true;
         res.status(200).json({
           message: "URL shortened",
-          shortURL: `http://localhost:4000/api/user/${shortKey}`,
+          shortURL: `https://url-shortener-frontend-kohl-tau.vercel.app/api/user/${shortKey}`,
           allUrls
         });
       }
