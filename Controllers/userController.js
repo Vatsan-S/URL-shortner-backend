@@ -231,7 +231,7 @@ export const generate_url = async (req, res, next) => {
         uniqueness = true;
         res.status(200).json({
           message: "URL shortened",
-          shortURL: `https://url-shortener-frontend-kohl-tau.vercel.app/api/user/${shortKey}`,
+          shortURL: `https://url-shortner-backend-cqtj.onrender.com/api/user/${shortKey}`,
           allUrls
         });
       }
