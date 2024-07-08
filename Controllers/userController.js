@@ -58,7 +58,7 @@ console.log(username)
   //----------------------------------------Send a link to activate account-------------------------------------------------------------
   const mailOptions = {
     from: "vatsan.designs@gmail.com",
-    to: "info.creatorstock@gmail.com",
+    to: email,
     subject: "Account Activation Link",
     html: `<a href="https://url-shortener-frontend-kohl-tau.vercel.app/activate_account/${randomString}/${username}">Activate Account</a>`,
   };
